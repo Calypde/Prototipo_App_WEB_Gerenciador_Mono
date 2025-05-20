@@ -1,0 +1,56 @@
+html, 
+    body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(45deg,#73c4f3, rgb(7, 105, 134));
+        }
+        div{
+            background-color: rgb(226, 238, 241);
+            position: absolute;
+            top: 35%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            padding: 70px;
+            padding-left: 130px;
+            padding-right: 130px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+            .text{
+                color: rgb(46, 128, 221);
+                text-align: center;
+                height: 40px;
+                font-size: 30px;
+            }
+        }
+        input{
+            padding: 12px;
+            border: none;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        button{
+            padding: 12px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background-color: rgb(1, 146, 204);
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        img{
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            width: 370px;
+            height: 160px;
+        }
+        .text2{
+            position: absolute;
+            top: 40%;
+            left: 26%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+        }

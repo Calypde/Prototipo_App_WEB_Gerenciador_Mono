@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Temas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/css/atividadeProjeto.css">
+
+</head>
+<body>
+    <div class="container-principal">
+        <nav class="navbar-expand-lg">
+                    <div class="logo">
+                        <img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/logo-responsivo.png" alt="" class="cest"> 
+                        <!--<a class="nav-link"  href="proposta.html">Temas</a>
+                        <a class="nav-link"  href="orientador.html">Docentes</a>
+                        <a class="nav-link"  href="docente.html">Meus orientandos</a>-->
+
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="propostaProf.html">Minhas Proposta</a></li>
+                                <li><a class="dropdown-item" href="#">Biblioteca Virtual</a></li>
+                                <li><a class="dropdown-item" href="docente.html">Meus Orientandos</a></li>
+                            </ul>
+                        </div>
+
+                        
+
+                    </div>
+
+                    <div class="container-prof"><a class="nome-prof">Olá, ALINE LOPES</a></div>
+
+                    <!--<div><p style="color: rgb(3, 65, 136); font-size: 25px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 5px;">Olá, Vagner Motta</p></div>-->
+                    <div >
+                        <div class="profile-container" >
+                            <a href="#profile" class="profile-btn"><img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/perfil.png" class="perfil"></a>
+                            
+                            <div id="profile" class="profile-popup">
+                                <div class="profile-header">
+                                    <div class="profile-pic">AL</div>
+                                    <div class="profile-name">Aline Lopes</div>
+                                    <div class="profile-email">aline.lopess@cest.edu.br</div> <hr style="color: #005ec928; margin-bottom: 15%;">
+                                </div>
+                                
+                                <div class="profile-actions">
+                                    <a href="#info" class="info-btn">Exibir Informações</a>
+                                    <a href="login.html" class="action-btn logout-btn">Sair</a>
+                                    <a href="#" class="action-btn" style="text-align: center; background-color: rgba(199, 196, 192, 0.384); color: rgb(66, 66, 66);">Fechar</a>
+                                </div>
+                            </div>
+                            
+                            <div id="info" class="profile-popup">
+                                <div class="profile-header">
+                                    <div class="profile-pic">AL</div>
+                                    <div class="profile-name">Informações</div>
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <p><strong>Registro acadêmico:</strong> 12345678</p>
+                                    <p><strong>xxxxx:</strong> yyyyyyyyyyyyyyyy</p>
+                                    <p><strong>Habilitação:</strong> yyyyyyyyyyyyyyyyy</p>
+                                    <p><strong>Turno:</strong> yyyyyyy</p>
+                                </div>
+                                
+                                <div class="profile-actions">
+                                    <a href="#profile" class="action-btn" style="text-align: center; background-color: rgba(199, 196, 192, 0.384); color: rgb(66, 66, 66);">Voltar</a>
+                                    <a href="login.html" class="action-btn logout-btn" style="color: #ffffff; background-color: rgba(253, 0, 0, 0.733);">Sair</a>
+                                </div>
+                            </div>
+
+                            <a href="#" class="close-area"></a>
+                        </div>
+                    </div>
+        </nav>
+
+        <br>
+        <div class="cabecalho">
+            <div>
+                <h1 class="title-text" style="margin-left: 20px; margin-top: 20px;">Atividades do Projeto</h1>
+                <p class="description-text" >Desenvolvimento de um protótipo de aplicação WEB para gerenciamento de Monografia <br> Aluno: Vagner Motta</p>
+            </div>
+            <div><button class="open-popup" id="openPopup"><strong>+</strong>ATIVIDADE</button></div>
+
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup-content-atv">
+                    <div class="popup-header">
+                        <h2 class="popup-title-atv">Adicionar Atividade</h2>
+                        <button class="close-popup" id="closePopup" >&times;</button>
+                    </div>
+                    
+                    <form id="documentForm">
+                        <div class="form-group">
+                            <label for="title" class="title">Título</label>
+                            <input type="text" id="title" name="title" required style="padding: 5px;">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description" class="title">Descrição</label>
+                            <textarea id="description" name="description" required class="description-input"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="deadline" class="title">Prazo</label>
+                            <input type="date" id="deadline" name="deadline" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pdf" class="title">Arquivo PDF</label>
+                            <input type="file" id="pdf" name="pdf" accept=".pdf">
+                        </div>
+                        
+                        <button type="submit" class="btn-save-atv">Salvar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>    
+        
+        <div class="container-projeto">
+
+            <div class="container-atv">
+                <div class="atividade destaque-borda">
+                <div class="atv">
+                    <p style="font-size: 20px;"><strong>Realizar Diagrama de Entidade e Relacionamento</strong></p>
+                    <a><strong>Descrição</strong></a>
+                    <p>Utilizar uma ferramenta da sua preferência para elaborar um diagrama de ER com o esquema do seu banco de dados.</p>
+                    <div class="status">⌛​ Em Andamento </div> <div class="data">📅 Prazo: 15/10/2025</div>
+                </div>
+
+                <div class="container-popup"> 
+                    
+                    <div class="container-btn">
+                        <div><a href="#edit-1" class="btn-interacao1" >Alterar</a></div>
+                        <div><a href="#status-1" class="btn-interacao2" >Finalizar</a></div>
+                        <div><a href="#download-1" class="btn-interacao3" >Download</a></div>
+                        <div><a href="#delete-1" class="btn-interacao4" >Excluir</a></div>
+                
+                    </div>
+
+                    <div id="edit-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Alterar Atividade</h2>
+                            <form class="popup-form" method="get" action="#">
+                                <label class="title">Título</label>
+                                <input type="text">
+                                <label class="description">Descrição</label>
+                                <textarea type="text" class="description-input"></textarea>
+                                <label class="prazo">Prazo</label>
+                                <input type="date" id="dataNascimento" name="dataNascimento">
+                                <label for="myDropdown" class="status-atv">Status</label>
+                                <select id="myDropdown" name="dropdown">
+                                    <option value="op0"></option>
+                                    <option value="op1">Não iniciada</option>
+                                    <option value="op2">Em andamento</option>
+                                    <option value="op3">Concluída</option>
+                                </select>
+
+                                <label for="pdf-upload" class="pdf">Anexar PDF</label><br>
+                                <!--<input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">-->
+                                <label class="file-upload">
+                                    <input type="file" class="file-input">
+                                    <span class="file-custom">
+                                        <span class="file-text">Selecione um arquivo...</span>
+                                        <span class="file-button">Procurar</span>
+                                    </span>
+                                </label>
+                                <br>
+                                <button type="submit" class="btn-save" style="background-color: #127205; padding: 4px 10px; border-radius: 4px;">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="status-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Finalizar</h2>
+                            <p>Deseja finalizar a atividade: <br> <strong>Realizar Diagrama de Entidade e Relacionamento</strong> </p>
+                            <div class="status-options">
+                                <a href="#" class="status-option status-pendente">Sim</a>
+                                <a href="#" class="status-option status-andamento">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="delete-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Exclusão</h2>
+                            <p>Tem certeza que deseja excluir o projeto: <br> <strong>"Realizar Diagrama de Entidade e Relacionamento"?</strong> </p>
+                            <form class="popup-form" method="get" action="#">
+                                <div class="popup-exclusao">
+                                <button type="submit" class="btn-delete" style="background-color: rgba(218, 6, 6, 0.788); padding: 5px 20px 5px 20px;" >Sim</button>
+                                <a href="#" class="btn-cancel edit-btn">Cancelar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="download-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Arquivos PDF disponíveis</h2>
+                            <p>Atividade: <br> <strong>Realizar Diagrama de Entidade e Relacionamento</strong> </p>
+
+                            <div class="pdf-list">
+                                
+                                <div class="pdf-item">
+                                    <div class="pdf-info">
+                                        <div class="pdf-name">Diagrama ER</div>
+                                        <div class="pdf-details">Última atualização: 15/10/2025 <br> Tamanho: 2.4 MB</div>
+                                    </div>
+                                    <a href="file:///C:/Users/bruno/Downloads/Diagrama%20ER-4.pdf" class="pdf-download" download>Download</a>
+                                </div>
+                                
+                                
+                                <div class="pdf-item">
+                                    <div class="pdf-info">
+                                        <div class="pdf-name">Referencial Teórico</div>
+                                        <div class="pdf-details">Última atualização: 15/10/2025 <br> Tamanho: 5.1 MB</div>
+                                    </div>
+                                    <a href="file:///C:/Users/bruno/Downloads/Diagrama%20ER-4.pdf" class="pdf-download" download>Download</a>
+                                </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- atividade 2-->
+
+            
+
+        </div>
+
+        <!--atividade 2 -->
+        
+        <div class="container-projeto">
+
+            <div class="container-atv">
+                <div class="atividade destaque-borda">
+                <div class="atv">
+                    <p style="font-size: 20px;"><strong>Preparar Questionário</strong></p>
+                    <a><strong>Descrição</strong></a>
+                    <p>Com base na necessidade da sua pesquisa elabore um conjunto de perguntas objetivas e prepare um questionário seja digital ou impresso.</p>
+                    <div class="status">⌛​ Em Andamento </div> <div class="data">📅 Prazo: 27/09/2025</div>
+                </div>
+
+                <div class="container-popup"> 
+                    
+                    <div class="container-btn">
+                        <div><a href="#edit-1" class="btn-interacao1 edit-btn" >Alterar</a></div>
+                        <div><a href="#status-1" class="btn-interacao2 status-btn" >Finalizar</a></div>
+                        <div><a href="#download-1" class="btn-interacao3 download-btn" >Download</a></div>
+                        <div><a href="#delete-1" class="btn-interacao4 delete-btn" >Excluir</a></div>
+                
+                    </div>
+
+                    <div id="edit-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Alterar Atividade</h2>
+                            <form class="popup-form" method="get" action="#">
+                                <label class="title">Título</label>
+                                <input type="text">
+                                <label class="description">Descrição</label>
+                                <textarea type="text" class="description-input"></textarea>
+                                <label class="prazo">Prazo</label>
+                                <input type="date" id="dataNascimento" name="dataNascimento">
+                                <label for="myDropdown" class="status-atv">Status</label>
+                                <select id="myDropdown" name="dropdown">
+                                    <option value="op0"></option>
+                                    <option value="op1">Não iniciada</option>
+                                    <option value="op2">Em andamento</option>
+                                    <option value="op3">Concluída</option>
+                                </select>
+
+                                <label for="pdf-upload" class="pdf">Anexar PDF</label><br>
+                                <!--<input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">-->
+                                <label class="file-upload">
+                                    <input type="file" class="file-input">
+                                    <span class="file-custom">
+                                        <span class="file-text">Selecione um arquivo...</span>
+                                        <span class="file-button">Procurar</span>
+                                    </span>
+                                </label>
+                                <br>
+                                <button type="submit" class="btn-save" style="background-color: #127205;">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="status-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Finalizar</h2>
+                            <p>Deseja finalizar a atividade: <br> <strong>Preparar Questionário</strong> </p>
+                            <div class="status-options">
+                                <a href="#" class="status-option status-pendente">Sim</a>
+                                <a href="#" class="status-option status-andamento">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="delete-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Exclusão</h2>
+                            <p>Tem certeza que deseja excluir o projeto: <br> <strong>"Preparar Questionário"?</strong> </p>
+                            <form class="popup-form" method="get" action="#">
+                                <div class="popup-exclusao">
+                                <button type="submit" class="btn-delete" style="background-color: rgba(218, 6, 6, 0.788); padding: 5px 20px 5px 20px;" >Sim</button>
+                                <a href="#" class="btn-cancel edit-btn">Cancelar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="download-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Arquivos PDF disponíveis</h2>
+                            <p>Atividade: <br> <strong>Preparar Questionário</strong> </p>
+
+                            <div class="pdf-list">
+                                
+                                <div class="pdf-item">
+                                    <div class="pdf-info">
+                                        <div class="pdf-name">Diagrama ER</div>
+                                        <div class="pdf-details">Última atualização: 27/09/2025 <br> Tamanho: 2.4 MB</div>
+                                    </div>
+                                    <a href="file:///C:/Users/bruno/Downloads/Diagrama%20ER-4.pdf" class="pdf-download" download>Download</a>
+                                </div>
+                                
+                                
+                                <div class="pdf-item">
+                                    <div class="pdf-info">
+                                        <div class="pdf-name">Referencial Teórico</div>
+                                        <div class="pdf-details">Última atualização: 27/09/2025 <br> Tamanho: 5.1 MB</div>
+                                    </div>
+                                    <a href="file:///C:/Users/bruno/Downloads/Diagrama%20ER-4.pdf" class="pdf-download" download>Download</a>
+                                </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- atividade 2-->
+
+            
+
+        </div>
+
+        <!--atividade 3-->
+
+        <div class="container-projeto">
+
+            <div class="container-atv">
+                <div class="atividade destaque-borda">
+                <div class="atv">
+                    <p style="font-size: 20px;"><strong>Revisão Bibliográfica</strong></p>
+                    <a><strong>Descrição</strong></a>
+                    <p>Realizar um levantamento sistemático de artigos científicos, livros e relatórios de mercado (últimos 5 anos).</p>
+                    <div class="status">⌛​ Em Andamento </div> <div class="data">📅 Prazo: 07/09/2025</div>
+                </div>
+
+                <div class="container-popup"> 
+                    
+                    <div class="container-btn">
+                        <div><a href="#edit-1" class="btn-interacao1 edit-btn" >Alterar</a></div>
+                        <div><a href="#status-1" class="btn-interacao2 status-btn" >Finalizar</a></div>
+                        <div><a href="#download-1" class="btn-interacao3 download-btn" >Download</a></div>
+                        <div><a href="#delete-1" class="btn-interacao4 delete-btn" >Excluir</a></div>
+                
+                    </div>
+
+                    <div id="edit-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Alterar Atividade</h2>
+                            <form class="popup-form" method="get" action="#">
+                                <label class="title">Título</label>
+                                <input type="text">
+                                <label class="description">Descrição</label>
+                                <textarea type="text" class="description-input"></textarea>
+                                <label class="prazo">Prazo</label>
+                                <input type="date" id="dataNascimento" name="dataNascimento">
+                                <label for="myDropdown" class="status-atv">Status</label>
+                                <select id="myDropdown" name="dropdown">
+                                    <option value="op0"></option>
+                                    <option value="op1">Não iniciada</option>
+                                    <option value="op2">Em andamento</option>
+                                    <option value="op3">Concluída</option>
+                                </select>
+
+                                <label for="pdf-upload" class="pdf">Anexar PDF</label><br>
+                                <!--<input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">-->
+                                <label class="file-upload">
+                                    <input type="file" class="file-input">
+                                    <span class="file-custom">
+                                        <span class="file-text">Selecione um arquivo...</span>
+                                        <span class="file-button">Procurar</span>
+                                    </span>
+                                </label>
+                                <br>
+                                <button type="submit" class="btn-save" style="background-color: #127205;">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="status-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Finalizar</h2>
+                            <p>Deseja finalizar a atividade: <br> <strong>Revisão Bibliográfica</strong> </p>
+                            <div class="status-options">
+                                <a href="#" class="status-option status-pendente">Sim</a>
+                                <a href="#" class="status-option status-andamento">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="delete-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Exclusão</h2>
+                            <p>Tem certeza que deseja excluir o projeto: <br> <strong>"Revisão Bibliográfica"?</strong> </p>
+                            <form class="popup-form" method="get" action="#">
+                                <div class="popup-exclusao">
+                                <button type="submit" class="btn-delete" style="background-color: rgba(218, 6, 6, 0.788); padding: 5px 20px 5px 20px;" >Sim</button>
+                                <a href="#" class="btn-cancel edit-btn">Cancelar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="download-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Arquivos PDF disponíveis</h2>
+                            <p>Atividade: <br> <strong>Revisão Bibliográfica</strong> </p>
+
+                            <div class="pdf-list">
+                                
+                                <div class="pdf-item">
+                                    <div class="pdf-info">
+                                        <div class="pdf-name">Diagrama ER</div>
+                                        <div class="pdf-details">Última atualização: 07/09/2025 <br> Tamanho: 2.4 MB</div>
+                                    </div>
+                                    <a href="file:///C:/Users/bruno/Downloads/Diagrama%20ER-4.pdf" class="pdf-download" download>Download</a>
+                                </div>
+                                
+                                
+                                <div class="pdf-item">
+                                    <div class="pdf-info">
+                                        <div class="pdf-name">Referencial Teórico</div>
+                                        <div class="pdf-details">Última atualização: 07/09/2025 <br> Tamanho: 5.1 MB</div>
+                                    </div>
+                                    <a href="file:///C:/Users/bruno/Downloads/Diagrama%20ER-4.pdf" class="pdf-download" download>Download</a>
+                                </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- atividade 2-->
+
+            
+
+        </div>
+
+        <!--<div class="container-atv-adc">
+            <p class="title-atv-adc">Cadastro de Atividade</p>
+            <div class="form-container">
+                <form action="/processar" method="post">
+                    
+                    <div class="form-group">
+                        <label for="titulo" class="required">Título</label>
+                        <input type="text" id="titulo" name="titulo" 
+                            placeholder="Digite o título da atividade" 
+                            required maxlength="100">
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="descricao" class="required">Descrição</label>
+                        <textarea id="descricao" name="descricao" 
+                                placeholder="Descreva a atividade com detalhes" required maxlength="100"></textarea>
+                    </div>
+                    
+                   
+                    <div class="form-group">
+                        <label for="data" class="required">Data</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    
+                    
+                    <button type="submit" class="submit-btn">Salvar Atividade</button>
+                </form>
+            </div>
+        </div>-->
+            
+    </div>
+        
+    </div>
+    <script src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/js/atividadeProjeto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

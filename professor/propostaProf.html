@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Temas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/css/propostaProf.css">
+
+</head>
+<body>
+    <div class="container-principal">
+        <nav class="navbar-expand-lg">
+                    <div class="logo">
+                        <img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/logo-responsivo.png" alt="" class="cest"> 
+                        <!--<a class="nav-link"  href="proposta.html">Temas</a>
+                        <a class="nav-link"  href="orientador.html">Docentes</a>
+                        <a class="nav-link"  href="docente.html">Meus orientandos</a>-->
+
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Minhas Proposta</a></li>
+                                <li><a class="dropdown-item" href="#">Biblioteca Virtual</a></li>
+                                <li><a class="dropdown-item" href="docente.html">Meus Orientandos</a></li>
+                            </ul>
+                        </div>
+
+                        
+
+                    </div>
+
+                    <div class="container-prof"><a class="nome-prof">Olá, ALINE LOPES</a></div>
+
+                    <!--<div><p style="color: rgb(3, 65, 136); font-size: 25px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 5px;">Olá, Vagner Motta</p></div>-->
+                    <div >
+                        <div class="profile-container" >
+                            <a href="#profile" class="profile-btn"><img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/perfil.png" class="perfil"></a>
+                            
+                            <div id="profile" class="profile-popup">
+                                <div class="profile-header">
+                                    <div class="profile-pic">AL</div>
+                                    <div class="profile-name">Aline Lopes</div>
+                                    <div class="profile-email">aline.lopess@cest.edu.br</div> <hr style="color: #005ec928; margin-bottom: 15%;">
+                                </div>
+                                
+                                <div class="profile-actions">
+                                    <a href="#info" class="info-btn">Exibir Informações</a>
+                                    <a href="login.html" class="action-btn logout-btn">Sair</a>
+                                    <a href="#" class="action-btn" style="text-align: center; background-color: rgba(199, 196, 192, 0.384); color: rgb(66, 66, 66);">Fechar</a>
+                                </div>
+                            </div>
+                            
+                            <div id="info" class="profile-popup">
+                                <div class="profile-header">
+                                    <div class="profile-pic">AL</div>
+                                    <div class="profile-name">Informações</div>
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <p><strong>Registro acadêmico:</strong> 12345678</p>
+                                    <p><strong>xxxxx:</strong> yyyyyyyyyyyyyyyy</p>
+                                    <p><strong>Habilitação:</strong> yyyyyyyyyyyyyyyyy</p>
+                                    <p><strong>Turno:</strong> yyyyyyy</p>
+                                </div>
+                                
+                                <div class="profile-actions">
+                                    <a href="#profile" class="action-btn" style="text-align: center; background-color: rgba(199, 196, 192, 0.384); color: rgb(66, 66, 66);">Voltar</a>
+                                    <a href="login.html" class="action-btn logout-btn" style="color: #ffffff; background-color: rgba(253, 0, 0, 0.733);">Sair</a>
+                                </div>
+                            </div>
+
+                            <a href="#" class="close-area"></a>
+                        </div>
+                    </div>
+        </nav>
+
+        <div class="container-atividades">
+            <br>
+            <div><h1 class="description-text">Minhas Propostas de Monografia</h1></div>
+            
+            <div><button class="open-popup" id="openPopup"><strong>+</strong>PROPOSTA</button></div>
+
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup-content-atv">
+                    <div class="popup-header">
+                        <h2 class="popup-title-atv">Adicionar Proposta</h2>
+                        <button class="close-popup" id="closePopup" >&times;</button>
+                    </div>
+                    
+                    <form id="documentForm">
+                        <div class="form-group">
+                            <label for="title" class="title">Título</label>
+                            <input type="text" id="title" name="title" required style="padding: 5px;">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description" class="title">Descrição</label>
+                            <textarea id="description" name="description" required class="description-input"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="status" class="title">Privacidade</label>
+                            <select id="myDropdown" class="myDropdown">
+                                <option value="op1">Público</option>
+                                <option value="op2">Privado</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn-save-atv">Salvar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="atividade destaque-borda">
+                <div class="atv">
+                    <h3>Inteligência Artificial Aplicada ao Diagnóstico Médico: Desafios e Oportunidades</h3><hr>
+                    <p><strong>Descrição</strong><br> Esta pesquisa investiga o uso de modelos de Machine Learning e Deep Learning para auxiliar no diagnóstico de doenças (como câncer, diabetes ou COVID-19) a partir de imagens médicas (raios-X, ressonâncias, etc.).</p>
+                    <div class="status">Público </div>
+                </div>
+
+                <div class="container-popup"> 
+                    
+                    <div class="container-btn">
+                        <div><a href="#edit-1" class="btn-interacao edit-btn" >Alterar</a></div>
+                        <div><a href="#delete-1" class="btn-interacao delete-btn" >Excluir</a></div>
+                
+                    </div>
+
+                    <div id="edit-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Alterar Projeto</h2>
+                            <form class="popup-form" method="get" action="#">
+                                <label class="title">Tema</label>
+                                <input type="text">
+                                <label class="description">Descrição</label>
+                                <textarea type="text" class="description-input"></textarea>
+                                <label for="myDropdown" class="status-atv">Status</label>
+                                <select id="myDropdown" name="dropdown">
+                                    <option value="op0"></option>
+                                    <option value="op1">Público</option>
+                                    <option value="op2">Privado</option>
+                                </select>
+
+                                <label for="pdf-upload" class="pdf">Anexar PDF</label><br>
+                                <!--<input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">-->
+                                <label class="file-upload">
+                                    <input type="file" class="file-input">
+                                    <span class="file-custom">
+                                        <span class="file-text">Selecione um arquivo...</span>
+                                        <span class="file-button">Procurar</span>
+                                    </span>
+                                </label>
+                                <br>
+                                <button type="submit" class="btn-save" style="background-color: #127205;">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div id="delete-1" class="popup">
+                        <div class="popup-content">
+                            <!--<a href="#" class="close-btn">&times;</a>-->
+                            <h2 class="popup-title">Exclusão</h2>
+                            <p>Tem certeza que deseja excluir o projeto? <br> <strong>"Inteligência Artificial Aplicada ao Diagnóstico Médico: Desafios e Oportunidades"</strong> </p>
+                            <form class="popup-form" method="get" action="#">
+                                <div class="popup-exclusao">
+                                <button type="submit" class="btn-delete" style="background-color: rgba(218, 6, 6, 0.788); padding: 5px 20px 5px 20px;" >Sim</button>
+                                <a href="#" class="btn-cancel edit-btn">Cancelar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="atividade destaque-borda">
+                <div class="atv">
+                    <h3>Blockchain para Segurança de Dados em Sistemas de Saúde</h3>
+                    <hr>
+                    <p><strong>Descrição</strong><br>A monografia explora como a tecnologia Blockchain pode garantir a integridade e privacidade de registros médicos eletrônicos, evitando fraudes e violações.</p>
+                    <div class="status">Público </div>
+                </div>
+
+                <div class="container-popup"> 
+                    
+                    <div class="container-btn">
+                        <div><a href="#edit-1" class="btn-interacao edit-btn" >Alterar</a></div>
+                        <div><a href="#delete-1" class="btn-interacao delete-btn" >Excluir</a></div>
+                
+                    </div>
+
+                    <div id="edit-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Alterar Projeto</h2>
+                            <form class="popup-form" method="get" action="#">
+                                <label class="title">Tema</label>
+                                <input type="text">
+                                <label class="description">Descrição</label>
+                                <textarea type="text" class="description-input"></textarea>
+                                <label for="myDropdown" class="status-atv">Status</label>
+                                <select id="myDropdown" name="dropdown">
+                                    <option value="op0"></option>
+                                    <option value="op1">Público</option>
+                                    <option value="op2">Privado</option>
+                                </select>
+
+                                <label for="pdf-upload" class="pdf">Anexar PDF</label><br>
+                                <!--<input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">-->
+                                <label class="file-upload">
+                                    <input type="file" class="file-input">
+                                    <span class="file-custom">
+                                        <span class="file-text">Selecione um arquivo...</span>
+                                        <span class="file-button">Procurar</span>
+                                    </span>
+                                </label>
+                                <br>
+                                <button type="submit" class="btn-save" style="background-color: #127205;">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div id="delete-1" class="popup">
+                        <div class="popup-content">
+                            <!--<a href="#" class="close-btn">&times;</a>-->
+                            <h2 class="popup-title">Exclusão</h2>
+                            <p>Tem certeza que deseja excluir o projeto? <br> <strong>"Blockchain para Segurança de Dados em Sistemas de Saúde"</strong> </p>
+                            <form class="popup-form" method="get" action="#">
+                                <div class="popup-exclusao">
+                                <button type="submit" class="btn-delete" style="background-color: rgba(218, 6, 6, 0.788); padding: 5px 20px 5px 20px;" >Sim</button>
+                                <a href="#" class="btn-cancel edit-btn">Cancelar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="atividade destaque-borda">
+                <div class="atv">
+                    <h3>Computação em Nuvem e Sustentabilidade: Análise do Consumo Energético em Data Centers</h3><hr>
+                    <p><strong>Descrição</strong><br>Esta pesquisa examina o impacto ambiental dos data centers de grande escala (como os da AWS, Google Cloud e Microsoft Azure) e propõe estratégias para reduzir seu consumo de energia.</p>
+                    <div class="status">Público </div>
+                </div>
+
+                <div class="container-popup"> 
+                    
+                    <div class="container-btn">
+                        <div><a href="#edit-1" class="btn-interacao edit-btn" >Alterar</a></div>
+                        <div><a href="#delete-1" class="btn-interacao delete-btn" >Excluir</a></div>
+                
+                    </div>
+
+                    <div id="edit-1" class="popup">
+                        <div class="popup-content">
+                            <a href="#" class="close-btn">&times;</a>
+                            <h2 class="popup-title">Alterar Projeto</h2>
+                            <form class="popup-form" method="get" action="#">
+                                <label class="title">Tema</label>
+                                <input type="text">
+                                <label class="description">Descrição</label>
+                                <textarea type="text" class="description-input"></textarea>
+                                <label for="myDropdown" class="status-atv">Status</label>
+                                <select id="myDropdown" name="dropdown">
+                                    <option value="op0"></option>
+                                    <option value="op1">Público</option>
+                                    <option value="op2">Privado</option>
+                                </select>
+
+                                <label for="pdf-upload" class="pdf">Anexar PDF</label><br>
+                                <!--<input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">-->
+                                <label class="file-upload">
+                                    <input type="file" class="file-input">
+                                    <span class="file-custom">
+                                        <span class="file-text">Selecione um arquivo...</span>
+                                        <span class="file-button">Procurar</span>
+                                    </span>
+                                </label>
+                                <br>
+                                <button type="submit" class="btn-save" style="background-color: #127205;">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div id="delete-1" class="popup">
+                        <div class="popup-content">
+                            <!--<a href="#" class="close-btn">&times;</a>-->
+                            <h2 class="popup-title">Exclusão</h2>
+                            <p>Tem certeza que deseja excluir o projeto? <br> <strong>"Computação em Nuvem e Sustentabilidade: Análise do Consumo Energético em Data Centers"</strong> </p>
+                            <form class="popup-form" method="get" action="#">
+                                <div class="popup-exclusao">
+                                <button type="submit" class="btn-delete" style="background-color: rgba(218, 6, 6, 0.788); padding: 5px 20px 5px 20px;" >Sim</button>
+                                <a href="#" class="btn-cancel edit-btn">Cancelar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+            
+    </div>
+    <script src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/js/propostaProf.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

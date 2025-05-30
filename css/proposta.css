@@ -1,13 +1,46 @@
-html,
+html, 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(45deg, #73c4f3, rgb(7, 105, 134));
+            margin: 0;
+            padding: 0;
+        }
+        .container-principal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            height: -webkit-fill-available; /* Para Safari */
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
             background-image: linear-gradient(45deg, #73c4f3, rgb(7, 105, 134));
         }
+        
         .navbar-expand-lg {
+            display: flex;
+            justify-content: space-between;
             background-color: rgb(255, 255, 255);
             padding: 3px;
             border-radius: 5px;
             box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+        }
+        .logo{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .nav-link {
+            color: rgb(2, 82, 148);
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 40px;
+            transition: transform 0.5s ease;
+        }
+        .nav-link:hover {
+            transform: scale(1.1);
+            color: rgb(0, 0, 0);
         }
         .cest {
             width: 100px;
@@ -15,28 +48,266 @@ html,
             margin-left: 30px;
             transform: scale(1.1);
             transition: 0.3s;
+            margin-top: 5px;
+            margin-right: 20px;
         }
         .perfil {
             width: 45px;
             height: 45px;
-            margin-left: 1700px;
             transform: scale(1.1);
-            transition: 0.3s;    
+            transition: 0.3s;
+            margin-right: 10px;
+            margin-top: 5px;
+            transition: transform 0.5s ease;
         }
-        .text {
-            color: rgb(255, 255, 255);
-            text-align: center;
-            height: 40px;
-            font-size: 30px;
-            margin-top: 2%;
-            margin-left: 10px;
+        .perfil:hover {
+            transform: scale(1.2);
         }
-        .list-group-item {
-            background-color: rgb(255, 255, 255);
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
-            margin: 10px;
-            padding: 10px;
-            height: 150px;
+
+        .container-atividades {
+            width: 100vw;
+            height: 100vh;   
+            margin: 0;
         }
         
+        h1 {
+            color: white;
+            text-align: left;
+            font-size: 30px;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            margin-left: 15px;
+            text-shadow: #363636 1px 1px 2px;
+        }
+        
+        .atividade {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .destaque-borda {
+            border-left: 5px solid #075d85;
+            padding-left: 15px; 
+            background-color: #f8f9fa; 
+        }
+
+        .atv{
+            width: 100%;
+        }
+        
+        .atividade h3 {
+            color: var(--cor-destaque);
+            margin-top: 0;
+            font-size: 23px;
+        }
+        
+        .prioridade {
+            display: inline-block;
+            padding: 3px 8px;
+            background-color: var(--cor-destaque);
+            color: rgb(12, 128, 223);
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .data {
+            color: #413f3f;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .status {
+            color: #074569e5;
+            font-size: 15px;
+            margin-top: 8px;
+        }
+        
+        /*.destaque {
+            background-color: rgba(255, 3, 3, 0.952);
+            border-left-width: 20px;
+        }*
+        
+
+        /* POP-UP Perfil*/
+
+        
+        .profile-container {
+            position: relative;
+        }
+        
+        .perfil {
+            width: 45px;
+            height: 45px;
+            transform: scale(1.1);
+            transition: 0.3s;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .profile-popup {
+            position: fixed;
+            top: 100px;
+            left: 1450px;
+            width: 20%;
+            height: 43%;
+            background: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 10px;
+            display: none;
+            z-index: 1001;
+        }
+        
+        .profile-popup:target {
+            display: block;
+        }
+        
+        .profile-header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #666;
+        }
+        
+        .profile-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .profile-email {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .profile-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        .action-btn {
+            padding:5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 10%;
+            width: 40%;
+            text-decoration: none;
+            text-align: center;
+            color: #413f3f;
+            transition: transform 0.5s ease;
+        }
+        .action-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .info-btn {
+            padding:5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 10%;
+            width: 40%;
+            text-decoration: none;
+            text-align: center;
+            color: #413f3f;
+            transition: transform 0.5s ease;
+            background-color: #e8f0fe;
+            color: #4285f4;
+            font-size: 15px;
+        }
+        .info-btn:hover {
+            transform: scale(1.1);
+            background-color: #d4e3f7;
+            color: #357ae8;
+        }
+        
+        .logout-btn {
+            padding:5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 10%;
+            width: 40%;
+            text-decoration: none;
+            text-align: center;
+            color: #413f3f;
+            transition: transform 0.5s ease;
+           background-color: rgba(253, 0, 0, 0.733);
+           color: #ffffff;
+        }
+        .logout-btn:hover {
+            transform: scale(1.1);
+            background-color: rgba(200, 0, 0, 0.733);
+            color: #ffffff;
+        }
+        
+        .close-area {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            display: none;
+            z-index: -1;
+        }
+        
+        .profile-popup:target ~ .close-area {
+            display: block;
+        }
+
+        .nome-aluno{
+            color: rgb(2, 82, 148);
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 40px;
+        }
+
+        .container-aluno{
+            margin-top: 10px;
+            align-items: center;
+            margin-left: 1200px;
+        }
+
+        .dropdown-item {
+            color: rgb(2, 82, 148);
+            font-size: 20px;
+            text-decoration: none;
+            transition: transform 0.5s ease;
+            width: 0%;
+        }
+        .dropdown-item:hover {
+            transform: scale(1.1);
+            color: rgb(0, 0, 0);
+        }
+
+        .dropdown-menu {
+            background-color: rgba(255, 255, 255, 0.925);
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            padding: 10px;
+            align-items: center;
+        }

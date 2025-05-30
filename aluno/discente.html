@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/css/discente.css">
+</head>
+
+<body>
+    <div class="container-principal">
+        <nav class="navbar-expand-lg">
+                    <div class="logo">
+                        <img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/logo-responsivo.png" alt="" class="cest"> 
+                        <!--<a class="nav-link"  href="proposta.html">Temas</a>
+                        <a class="nav-link"  href="orientador.html">Docentes</a>
+                        <a class="nav-link"  href="docente.html">Meus orientandos</a>-->
+
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="proposta.html">Temas</a></li>
+                                <li><a class="dropdown-item" href="orientador.html">Docentes</a></li>
+                                <li><a class="dropdown-item" href="discente.html">Meu Projeto</a></li>
+                            </ul>
+                        </div>
+
+                        
+
+                    </div>
+
+                    <div class="container-aluno"><a class="nome-aluno">Olá, VAGNER MOTTA</a></div>
+
+                    
+                    <div >
+                        <div class="profile-container" >
+                            <a href="#profile" class="profile-btn"><img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/perfil.png" class="perfil"></a>
+                            <div>
+                            <div id="profile" class="profile-popup">
+                                <div class="profile-header">
+                                    <div class="profile-pic">VM</div>
+                                    <div class="profile-name">Vagner Motta</div>
+                                    <div class="profile-email">vagner.motta@cest.edu.br</div> <hr style="color: #005ec928; margin-bottom: 15%;">
+                                </div>
+                                
+                                <div class="profile-actions">
+                                    <a href="#info" class="info-btn">Exibir Informações</a>
+                                    <a href="login.html" class="action-btn logout-btn">Sair</a>
+                                    <a href="#" class="action-btn" style="text-align: center; background-color: rgba(199, 196, 192, 0.384); color: rgb(66, 66, 66);">Fechar</a>
+                                </div>
+                            </div>
+                            
+                            <div id="info" class="profile-popup">
+                                <div class="profile-header">
+                                    <div class="profile-pic">VM</div>
+                                    <div class="profile-name">Informações</div>
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <p><strong>Registro acadêmico:</strong> 12345678</p>
+                                    <p><strong>Curso:</strong> Sistemas de Informação</p>
+                                    <p><strong>Habilitação:</strong> Bacharel em Sistemas de Informação</p>
+                                    <p><strong>Turno:</strong> Noturno</p>
+                                </div>
+                                
+                                <div class="profile-actions">
+                                    <a href="#profile" class="action-btn" style="text-align: center; background-color: rgba(199, 196, 192, 0.384); color: rgb(66, 66, 66);">Voltar</a>
+                                    <a href="login.html" class="action-btn logout-btn" style="color: #ffffff; background-color: rgba(253, 0, 0, 0.733);">Sair</a>
+                                </div>
+                            </div>
+
+                            <a href="#" class="close-area"></a>
+                        </div>
+                    </div>
+        </nav>
+
+        <div class="container-atividades">
+            <br><br>
+            <h1>Desenvolvimento de um protótipo de aplicação WEB para gerenciamento de Monografia<br><br>Lista de Atividades</h1>
+            
+            <div class="atividade destaque-borda">
+                <div class="atv">
+                    <h3>Reunião com a equipe de desenvolvimento</h3>
+                    <p>Discutir as novas funcionalidades do projeto e alinhar prazos.</p>
+                    <div class="status">⌛​ Em Andamento </div> <div class="data">📅 Prazo: 15/05/2024</div>
+                </div>
+
+                <div class="container-popup"> 
+                    
+                    <div class="container-pdf">
+                        <a href="#popup"> <img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/pdf.png" href="#popup" alt="PDF" class="pdf"></a>
+                    </div>
+
+                    <div id="popup" class="popup">
+                        <div class="popup-content">
+                            <h2>Anexar PDF</h2>
+                            <p>Atividade <br> <strong>Reunião com a equipe de desenvolvimento.</strong></p><br>
+                            <form action="/upload" method="post" enctype="multipart/form-data">
+                                <label for="pdf-upload">Selecione um arquivo PDF:</label>
+                                <input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">
+                                <br><br>
+                                <div style="text-align: center;">
+                                    <button class="btn" type="submit">Enviar PDF</button>
+                                </div>   
+                            </form>
+                            <a href="#" class="close" style="color: rgb(2, 82, 148);">×</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="atividade destaque-borda">
+                <div class="atv">
+                    <h3>Reunião com a equipe de desenvolvimento</h3>
+                    <p>Discutir as novas funcionalidades do projeto e alinhar prazos.</p>
+                    <div class="status" style="color: brown;">🕓​ Não iniciada </div><div class="data">📅 Prazo: 15/05/2024</div>
+                </div>        
+                <div class="container-popup">
+                    <div class="container-pdf">
+                        <a href="#popup"> <img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/pdf.png" href="#popup" alt="PDF" class="pdf"></a>
+                    </div>
+
+                    <div id="popup" class="popup">
+                        <div class="popup-content">
+                            <h2>Anexar PDF</h2>
+                            <p>Referente a Atv. Envio do referencial teórico</p><br>
+                            <form action="/upload" method="post" enctype="multipart/form-data">
+                                <label for="pdf-upload">Selecione um arquivo PDF:</label>
+                                <input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">
+                                <br><br>
+                                <div style="text-align: center;">
+                                    <button class="btn" type="submit">Enviar PDF</button>
+                                </div>   
+                            </form>
+                            <a href="#" class="close" style="color: rgb(2, 82, 148);">×</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="atividade destaque-borda">
+                <div class="atv">
+                    <h3>Reunião com a equipe de desenvolvimento</h3>
+                    <p>Discutir as novas funcionalidades do projeto e alinhar prazos.</p>
+                    <div class="status" style="color: brown;">🕓​ Não iniciada </div><div class="data">📅 Prazo: 15/05/2024</div>
+                </div>        
+                <div class="container-popup">
+                    <div class="container-pdf">
+                        <a href="#popup"> <img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/pdf.png" href="#popup" alt="PDF" class="pdf"></a>
+                    </div>
+
+                    <div id="popup" class="popup">
+                        <div class="popup-content">
+                            <h2>Anexar Atividade</h2>
+                            <p>Pendência: Envio do referencial teórico</p><br>
+                            <form action="/upload" method="post" enctype="multipart/form-data">
+                                <label for="pdf-upload">Selecione um arquivo PDF:</label>
+                                <input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">
+                                <br><br>
+                                <div style="text-align: center;">
+                                    <button class="btn" type="submit">Enviar PDF</button>
+                                </div>   
+                            </form>
+                            <a href="#" class="close" style="color: rgb(2, 82, 148);">×</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="atividade destaque-borda">
+                <div class="atv">
+                    <h3>Reunião com a equipe de desenvolvimento</h3>
+                    <p>Discutir as novas funcionalidades do projeto e alinhar prazos.</p>
+                    <div class="status" style="color: green;">​​✅​​​ Concluída </div><div class="data">📅 Prazo: 15/05/2024</div>
+                </div>        
+                <div class="container-popup">
+                    <div class="container-pdf">
+                        <a href="#popup"> <img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/pdf.png" href="#popup" alt="PDF" class="pdf"></a>
+                    </div>
+
+                    <div id="popup" class="popup">
+                        <div class="popup-content">
+                            <h2>Anexar Atividade</h2>
+                            <p>Pendência: Envio do referencial teórico</p><br>
+                            <form action="/upload" method="post" enctype="multipart/form-data">
+                                <label for="pdf-upload">Selecione um arquivo PDF:</label>
+                                <input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">
+                                <br><br>
+                                <div style="text-align: center;">
+                                    <button class="btn" type="submit">Enviar PDF</button>
+                                </div>   
+                            </form>
+                            <a href="#" class="close" style="color: rgb(2, 82, 148);">×</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

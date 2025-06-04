@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Temas</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/css/propostaProf.css">
+    <link rel="stylesheet" type="text/css" href="file:///C:/app_web/css/propostaProf.css">
 
 </head>
 <body>
     <div class="container-principal">
         <nav class="navbar-expand-lg">
                     <div class="logo">
-                        <img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/logo-responsivo.png" alt="" class="cest"> 
+                        <img src="file:///C:/app_web/assets/logo-responsivo.png" alt="" class="cest"> 
                         <!--<a class="nav-link"  href="proposta.html">Temas</a>
                         <a class="nav-link"  href="orientador.html">Docentes</a>
                         <a class="nav-link"  href="docente.html">Meus orientandos</a>-->
@@ -37,7 +37,7 @@
                     <!--<div><p style="color: rgb(3, 65, 136); font-size: 25px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 5px;">Olá, Vagner Motta</p></div>-->
                     <div >
                         <div class="profile-container" >
-                            <a href="#profile" class="profile-btn"><img src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/assets/perfil.png" class="perfil"></a>
+                            <a href="#profile" class="profile-btn"><img src="file:///C:/app_web/assets/perfil.png" class="perfil"></a>
                             
                             <div id="profile" class="profile-popup">
                                 <div class="profile-header">
@@ -48,7 +48,7 @@
                                 
                                 <div class="profile-actions">
                                     <a href="#info" class="info-btn">Exibir Informações</a>
-                                    <a href="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/index.html" class="action-btn logout-btn">Sair</a>
+                                    <a href="file:///C:/app_web/public/index.html" class="action-btn logout-btn">Sair</a>
                                     <a href="#" class="action-btn" style="text-align: center; background-color: rgba(199, 196, 192, 0.384); color: rgb(66, 66, 66);">Fechar</a>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                                 
                                 <div class="profile-actions">
                                     <a href="#profile" class="action-btn" style="text-align: center; background-color: rgba(199, 196, 192, 0.384); color: rgb(66, 66, 66);">Voltar</a>
-                                    <a href="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/index.html" class="action-btn logout-btn" style="color: #ffffff; background-color: rgba(253, 0, 0, 0.733);">Sair</a>
+                                    <a href="file:///C:/app_web/public/index.html" class="action-btn logout-btn" style="color: #ffffff; background-color: rgba(253, 0, 0, 0.733);">Sair</a>
                                 </div>
                             </div>
 
@@ -79,7 +79,7 @@
 
         <div class="container-atividades">
             <br>
-            <div><h1 class="description-text">Minhas Propostas de Monografia</h1></div>
+            <header><h1 class="description-text">Minhas Propostas de Monografia</h1></header>
             
             <div><button class="open-popup" id="openPopup"><strong>+</strong>PROPOSTA</button></div>
 
@@ -90,20 +90,20 @@
                         <button class="close-popup" id="closePopup" >&times;</button>
                     </div>
                     
-                    <form id="documentForm">
+                    <form id="propostaForm" method="post" action="http://localhost/php/propostaProf.php">
                         <div class="form-group">
                             <label for="title" class="title">Título</label>
-                            <input type="text" id="title" name="title" required style="padding: 5px;">
+                            <input type="text" id="title" name="nome" required style="padding: 5px;">
                         </div>
                         
                         <div class="form-group">
                             <label for="description" class="title">Descrição</label>
-                            <textarea id="description" name="description" required class="description-input"></textarea>
+                            <textarea id="description" name="descricao" required class="description-input"></textarea>
                         </div>
                         
                         <div class="form-group">
-                            <label for="status" class="title">Privacidade</label>
-                            <select id="myDropdown" class="myDropdown">
+                            <label for="status" class="title">Visibilidade</label>
+                            <select id="myDropdown" class="myDropdown" name="visibilidade">
                                 <option value="op1">Público</option>
                                 <option value="op2">Privado</option>
                             </select>
@@ -135,18 +135,17 @@
                             <h2 class="popup-title">Alterar Projeto</h2>
                             <form class="popup-form" method="get" action="#">
                                 <label class="title">Tema</label>
-                                <input type="text">
+                                <input type="text" >
                                 <label class="description">Descrição</label>
-                                <textarea type="text" class="description-input"></textarea>
-                                <label for="myDropdown" class="status-atv">Status</label>
+                                <textarea type="text" class="description-input" ></textarea>
+                                <label for="myDropdown" class="status-atv">Visibilidade</label>
                                 <select id="myDropdown" name="dropdown">
-                                    <option value="op0"></option>
-                                    <option value="op1">Público</option>
-                                    <option value="op2">Privado</option>
+                                    <option value="op1">Privado</option>
+                                    <option value="op2">Público</option>
                                 </select>
 
-                                <label for="pdf-upload" class="pdf">Anexar PDF</label><br>
-                                <!--<input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">-->
+                                <!--<label for="pdf-upload" class="pdf">Anexar PDF</label><br>
+                                <input type="file" id="pdf-upload" name="pdf_file" accept=".pdf, application/pdf">
                                 <label class="file-upload">
                                     <input type="file" class="file-input">
                                     <span class="file-custom">
@@ -154,7 +153,7 @@
                                         <span class="file-button">Procurar</span>
                                     </span>
                                 </label>
-                                <br>
+                                <br>-->
                                 <button type="submit" class="btn-save" style="background-color: #127205;">Salvar</button>
                             </form>
                         </div>
@@ -307,7 +306,7 @@
         </div>
             
     </div>
-    <script src="file:///C:/Users/bruno/OneDrive/Documentos/0/app_web_gerenciador_monografia/js/propostaProf.js"></script>
+    <script src="file:///C:/app_web/js/propostaProf.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
